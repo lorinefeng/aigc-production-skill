@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGC Production"
+  short_description: "把商业生图模型接入可验收、可返工、可追溯的完整生产交付流程"
+  default_prompt: "Use $aigc-production to turn these image references and requirements into a gated production job."

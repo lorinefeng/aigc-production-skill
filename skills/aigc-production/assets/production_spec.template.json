@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "job_id": "replace-with-job-id",
+  "use_case": "product-new-image",
+  "coordinate_convention": "Image-left/right means viewer coordinates; anatomical left/right is stated explicitly.",
+  "blocking_unknowns": [],
+  "input_safety": {
+    "max_reference_bytes": 1500000,
+    "max_reference_long_edge": 2048
+  },
+  "references": [],
+  "global_invariants": [],
+  "qa": {
+    "required_categories": [
+      "subject_identity",
+      "composition_camera",
+      "pose_anatomy",
+      "product_wardrobe_structure",
+      "color_material",
+      "count_text_logo_topology",
+      "background_lighting",
+      "crop_delivery"
+    ],
+    "uncertain_is_fail": true,
+    "selective_rerun_only": true,
+    "forbid_failed_output_as_reference": true,
+    "batch_release_requires_calibration_pass": true,
+    "client_approval_separate_from_internal_qa": true,
+    "max_selective_reruns_per_asset": 2,
+    "calibration_asset_id": "01"
+  },
+  "assets": [],
+  "output": {
+    "candidate_directory": "candidates",
+    "final_directory": "generated",
+    "expected_files": [],
+    "allowed_extensions": [".png"],
+    "final_directory_only_accepted_assets": true,
+    "review_file": "review/summary.json"
+  }
+}
